@@ -11,5 +11,9 @@ export default function App() {
 
 function Counter() {
   const [count, setCount] = useState(0);
-  return <button onClick={() => setCount(count + 1)}>You clicked me {count} times</button>;
+  return (
+    <button className="bg-red-800 text-red-500" onClick={() => setCount(count + 1)}>
+      You clicked me {count} times
+    </button>
+  );
 }
