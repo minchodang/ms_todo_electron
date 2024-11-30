@@ -1,4 +1,15 @@
-import { createRoot } from 'react-dom/client';
+import { useState } from 'react';
 
-const root = createRoot(document.body);
-root.render(<h2>Hello from React!</h2>);
+export default function App() {
+  return (
+    <>
+      <h1>Hello, world!</h1>
+      <Counter />
+    </>
+  );
+}
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount(count + 1)}>You clicked me {count} times</button>;
+}
